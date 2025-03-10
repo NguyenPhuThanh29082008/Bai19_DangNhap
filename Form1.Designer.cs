@@ -36,8 +36,11 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.errorProviderUser = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderPass = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblInfo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPass)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 141);
+            this.label2.Location = new System.Drawing.Point(83, 127);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 29);
@@ -64,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(145, 205);
+            this.label3.Location = new System.Drawing.Point(145, 191);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 29);
@@ -74,7 +77,7 @@
             // 
             // btnDangnhap
             // 
-            this.btnDangnhap.Location = new System.Drawing.Point(85, 277);
+            this.btnDangnhap.Location = new System.Drawing.Point(85, 263);
             this.btnDangnhap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnDangnhap.Name = "btnDangnhap";
             this.btnDangnhap.Size = new System.Drawing.Size(180, 67);
@@ -85,7 +88,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(270, 277);
+            this.btnThoat.Location = new System.Drawing.Point(270, 263);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(177, 67);
@@ -96,7 +99,7 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(267, 138);
+            this.txtUser.Location = new System.Drawing.Point(267, 124);
             this.txtUser.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(180, 36);
@@ -104,22 +107,38 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(267, 202);
+            this.txtPass.Location = new System.Drawing.Point(267, 188);
             this.txtPass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(180, 36);
             this.txtPass.TabIndex = 2;
             // 
-            // errorProvider1
+            // errorProviderUser
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.errorProviderUser.ContainerControl = this;
+            // 
+            // errorProviderPass
+            // 
+            this.errorProviderPass.ContainerControl = this;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Red;
+            this.lblInfo.Location = new System.Drawing.Point(96, 235);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(29, 23);
+            this.lblInfo.TabIndex = 5;
+            this.lblInfo.Text = "lbl";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 403);
+            this.ClientSize = new System.Drawing.Size(538, 372);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.btnThoat);
@@ -132,7 +151,9 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,7 +168,9 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProviderUser;
+        private System.Windows.Forms.ErrorProvider errorProviderPass;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
 
