@@ -26,5 +26,10 @@ namespace Bai19_DangNhap
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
