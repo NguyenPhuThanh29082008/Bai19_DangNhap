@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,22 +74,22 @@
             // 
             // btnDangnhap
             // 
-            this.btnDangnhap.Location = new System.Drawing.Point(267, 277);
+            this.btnDangnhap.Location = new System.Drawing.Point(85, 277);
             this.btnDangnhap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnDangnhap.Name = "btnDangnhap";
             this.btnDangnhap.Size = new System.Drawing.Size(180, 67);
-            this.btnDangnhap.TabIndex = 3;
+            this.btnDangnhap.TabIndex = 4;
             this.btnDangnhap.Text = "Đăng nhập";
             this.btnDangnhap.UseVisualStyleBackColor = true;
             this.btnDangnhap.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(88, 277);
+            this.btnThoat.Location = new System.Drawing.Point(270, 277);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(177, 67);
-            this.btnThoat.TabIndex = 4;
+            this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.button2_Click);
@@ -97,7 +100,7 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(180, 36);
-            this.txtUser.TabIndex = 5;
+            this.txtUser.TabIndex = 1;
             // 
             // txtPass
             // 
@@ -106,7 +109,11 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(180, 36);
-            this.txtPass.TabIndex = 6;
+            this.txtPass.TabIndex = 2;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
@@ -123,7 +130,9 @@
             this.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +147,7 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
